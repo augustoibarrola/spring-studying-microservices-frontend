@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CustomerService } from '../Shared/Services/customer-service.service';
-import { Customer } from '../Shared/Models/customer';
+import { CustomerService } from '../../Shared/Services/customer-service.service';
+import { Customer } from '../../Shared/Models/customer';
 
 @Component({
   selector: 'app-customer-deck',
