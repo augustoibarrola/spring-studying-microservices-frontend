@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomerDeckComponent } from './Customers/customer-deck/customer-deck.component';
-import { CustomerDetailsComponent } from './Customers/customer-details/customer-details.component';
+import { CustomerDetailsComponent } from './Customers/customer-deck/customer-details/customer-details.component';
 
 @NgModule({
   declarations: [

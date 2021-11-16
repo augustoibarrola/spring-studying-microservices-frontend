@@ -12,9 +12,11 @@ export class CustomerService {
   customersURL: string = "http://localhost:8200/customers";
 
   getCustomers() {
-    
     return this.http.get<Customer[]>(this.customersURL);
+  }
 
+  getCustomerDetails(phoneNumber: number) {
+    return this.http.get<Customer>(this.customersURL + "/" + phoneNumber.toString());
   }
 
 }
