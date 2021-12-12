@@ -20,8 +20,8 @@ export class CustomerDetailsComponent implements OnInit {
   }
 
   getCustomerDetails(){
-    const phoneNumber = Number(this.route.snapshot.paramMap.get('phoneNumber'));
-    this.customerService.getCustomerDetails(phoneNumber).subscribe(microserviceResponse => 
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.customerService.getCustomerDetails(id).subscribe(microserviceResponse => 
       this.customer = microserviceResponse
       );
   }
