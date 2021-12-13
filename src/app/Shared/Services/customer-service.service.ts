@@ -10,13 +10,14 @@ export class CustomerService {
   constructor(private http: HttpClient) { }
   
   customersURL: string = "http://localhost:8200/customers";
+  customerURL: string = "http://localhost:8200/customer/";
 
   getCustomers() {
     return this.http.get<Customer[]>(this.customersURL);
   }
 
   getCustomerDetails(id: number) {
-    return this.http.get<Customer>(this.customersURL + "/" + id.toString());
+    return this.http.get<Customer>(this.customerURL + id.toString());
   }
 
 }
