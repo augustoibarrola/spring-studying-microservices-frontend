@@ -5,7 +5,7 @@ import { Customer } from '../../Shared/Models/customer';
 @Component({
   selector: 'app-customer-deck',
   templateUrl: './customer-deck.component.html',
-  styleUrls: ['./customer-deck.component.css']
+  styleUrls: ['./customer-deck.component.scss']
 })
 export class CustomerDeckComponent implements OnInit {
 
