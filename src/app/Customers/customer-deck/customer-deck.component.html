@@ -1,6 +1,7 @@
 <table class="table table-striped">
     <thead>
         <tr>
+            <th scope="col"></th>
             <th scope="col">Name</th>
             <th scope="col">Phone Number</th>
             <th scope="col">Age</th>
@@ -8,10 +9,11 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let customer of customers; "routerLink="/customer/{{customer.id}}">
-                <td>{{customer.firstName}}</td>
-                <td>{{customer.phoneNumber}}</td>
-                <td>{{customer.age}}</td>
+        <tr *ngFor="let customer of customers; " routerLink="/customer/{{customer.id}}">
+            <td><span class="fas fa-user-alt fa-lg"></span></td>
+            <td>{{customer.firstName}}</td>
+            <td>{{customer.phoneNumber}}</td>
+            <td>{{customer.age}}</td>
         </tr>
     </tbody>
 </table>
