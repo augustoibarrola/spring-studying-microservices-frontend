@@ -1,27 +1,36 @@
-<nav class="">
-  <div class="">
-
-    <div class="" routerLink="/">
-    {{title}}
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container-fluid">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarExample01"
+        aria-controls="navbarExample01"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarExample01">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" aria-current="page" routerLink="/">{{title}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/">#</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/">#</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/">#</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="">
-      <ul class="">
-        
-        <li class=" ">
-          <a class="" routerLink="/"> link 1 </a>
-        </li>
-        
-        <li class="">
-          <a class="" routerLink="/"> link 2 </a>
-        </li>
-        
-        <li class="">
-          <a class="" routerLink="/"> link 3 </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  </nav>
+</header>
 <div class="main-app-body">
   <router-outlet></router-outlet>
 </div>
