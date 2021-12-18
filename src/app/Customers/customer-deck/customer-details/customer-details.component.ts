@@ -3,6 +3,9 @@ import { ActivatedRoute } from '@angular/router';
 import { CustomerService } from 'src/app/Shared/Services/customer-service.service';
 // import { threadId } from 'worker_threads';
 import { Customer } from 'src/app/Shared/Models/customer';
+import { MdbModalRef, MdbModalService } from 'mdb-angular-ui-kit/modal';
+import { ModalComponent } from './modal/modal.component';
+
 
 @Component({
   selector: 'app-customer-details',
@@ -10,9 +13,11 @@ import { Customer } from 'src/app/Shared/Models/customer';
   styleUrls: ['./customer-details.component.scss']
 })
 export class CustomerDetailsComponent implements OnInit {
+  
+  modalRef!: MdbModalRef<ModalComponent>;
 
   @Input() customer?: Customer;
-  constructor(private customerService: CustomerService, private route: ActivatedRoute) { }
+  constructor(private customerService: CustomerService, private route: ActivatedRoute, private modalService: MdbModalService) { }
 
   ngOnInit(): void {
     this.getCustomerDetails();
@@ -24,6 +29,10 @@ export class CustomerDetailsComponent implements OnInit {
     this.customerService.getCustomerDetails(id).subscribe(microserviceResponse => 
       this.customer = microserviceResponse
       );
+  }
+  
+  openModal() {
+    this.modalRef = this.modalService.open(ModalComponent);
   }
 
 }

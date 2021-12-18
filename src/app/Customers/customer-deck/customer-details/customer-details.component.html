@@ -1,7 +1,8 @@
 <div *ngIf="customer; else noCustomer" class="container-fluid">
     <div class="customer-details-deck ">
+        <span class="fas fa-user-alt fa-6x"></span>
         <p>ID: {{customer.id}}</p>
-        <p>FIRST NAME: {{customer.firstName}}</p>
+        <!-- <p>FIRST NAME: {{customer.firstName}}</p> -->
         <p>MIDDLE NAME: {{customer.middleName}}</p>
         <p>LAST NAME: {{customer.lastName}}</p>
         <p>AGE: {{customer.age}}</p>
@@ -11,6 +12,39 @@
         <p>PASSWORD: {{customer.password}}</p>
         <p>SSN: {{customer.ssn}}</p>
     </div >
+    
+    <div class="card mb-3 w-100">
+        <div class="row g-0">
+            
+            <div class="col-md-4">
+                <img
+                src="https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg"
+                alt="Trendy Pants and Shoes"
+                class="img-fluid"
+                />
+            </div>
+            
+            <div class="col-md-8">
+                <div class="card-header">Featured</div>
+                
+                <div class="card-body">
+                    <div>
+                        <h5 class="card-title"> Name: </h5>
+                    </div>
+                    <div class="card-text">
+                        <p>{{customer.firstName}}</p>
+                        <p>{{customer.middleName}}</p>
+                        <p>{{customer.lastName}}</p>
+                    </div>
+                    
+                </div>
+                
+                <div class="card-footer text-muted">
+                    <button class="btn btn-primary" (click)="openModal()">Open modal</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 <ng-template #noCustomer>Sorry! no customer details.</ng-template>
-
