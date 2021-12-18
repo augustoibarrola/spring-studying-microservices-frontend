@@ -9,6 +9,7 @@ import { CustomerDetailsComponent } from './Customers/customer-deck/customer-det
 import { ModalComponent } from './Customers/customer-deck/customer-details/modal/modal.component';
 import { MdbModalService } from 'mdb-angular-ui-kit/modal';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { OverlayModule } from '@angular/cdk/overlay';
     AppRoutingModule,
     BrowserAnimationsModule, 
     HttpClientModule, 
-    OverlayModule
+    OverlayModule,
+    ReactiveFormsModule
   ],
   providers: [MdbModalService],
   bootstrap: [AppComponent]

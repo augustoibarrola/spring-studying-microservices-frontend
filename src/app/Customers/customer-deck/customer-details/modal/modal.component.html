@@ -1,1 +1,77 @@
-<p>modal works!</p>
+<form [formGroup]="customerDetails" (ngSubmit)=onSubmit()>
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Customer Details</h5>
+    </div>
+    <div class="modal-body">
+
+        <div class="form-group">
+            <label class=" " for=""> Name </label>
+            <div class="">
+                <input class="form-control" type="text" name="" id="" formControlName="controlFirstName"
+                    placeholder="first name" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class=" " for=""> Name </label>
+            <div class="">
+                <input class="form-control" type="text" name="" id="" formControlName="controlMiddleName"
+                    placeholder="middle name" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class=" " for=""> Name </label>
+            <div class="">
+                <input class="form-control" type="text" name="" id="" formControlName="controlLastName"
+                    placeholder="last name" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class=" " for=""> Age: </label>
+            <div class="">
+                <input class="form-control" type="text" name="" id="" formControlName="controlAge" placeholder="age" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class=" " for=""> Phone Number: </label>
+            <div class="">
+                <input class="form-control" type="text" name="" id="" formControlName="controlPhoneNumber"
+                    placeholder="phone number" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class=" " for=""> E-Mail: </label>
+            <div class="">
+                <input class="form-control" type="text" name="" id="" formControlName="controlEMail"
+                    placeholder="e-mail" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class=" " for=""> Address: </label>
+            <div class="">
+                <input class="form-control" type="text" name="" id="" formControlName="controlAddress"
+                    placeholder="aaddress" />
+            </div>
+        </div>
+        <!-- TODO hide ssn so that it only shows last 4 ; format it -->
+        <div class="form-group">
+            <label class=" " for=""> SSN: </label>
+            <div class="">
+                <input class="form-control" type="text" name="" id="" formControlName="controlSSN" placeholder="-" />
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" (click)="modalRef.close()">Close</button>
+    </div>
+</form>
