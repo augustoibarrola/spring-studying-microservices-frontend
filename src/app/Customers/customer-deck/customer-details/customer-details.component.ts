@@ -16,7 +16,7 @@ export class CustomerDetailsComponent implements OnInit {
   
   modalRef!: MdbModalRef<ModalComponent>;
 
-  @Input() customer?: Customer;
+  customer!: Customer;
   constructor(private customerService: CustomerService, private route: ActivatedRoute, private modalService: MdbModalService) { }
 
   ngOnInit(): void {
@@ -31,8 +31,11 @@ export class CustomerDetailsComponent implements OnInit {
       );
   }
   
-  openModal() {
-    this.modalRef = this.modalService.open(ModalComponent);
+  openModal():any {
+    this.modalRef = this.modalService.open(ModalComponent, {data: {customer: this.customer}});
+    console.log("Customer:\n");
+    console.log(this.customer);
+
   }
 
 }

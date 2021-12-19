@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MdbModalRef } from 'mdb-angular-ui-kit/modal';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Customer } from 'src/app/Shared/Models/customer';
 
 
 @Component({
@@ -10,7 +11,9 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class ModalComponent implements OnInit {
 
-  customerDetails = this.fb.group({
+    customer!:Customer;
+
+    customerDetails = this.fb.group({
     controlFirstName: ['', Validators.required],
     controlMiddleName: [''],
     controlLastName: [''],
@@ -27,7 +30,7 @@ export class ModalComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log("this method needs to send new customer details (a FormGroup obj.) to customerdetailscomponent.\n must be refactored")
+    console.log("This method needs to send new customer details (a FormGroup obj.) to customerdetailscomponent.\nMust be refactored")
   }
 
 }

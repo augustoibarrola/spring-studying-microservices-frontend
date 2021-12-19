@@ -9,20 +9,20 @@ import { Customer } from '../../Shared/Models/customer';
 })
 export class CustomerDeckComponent implements OnInit {
 
-  constructor(private customerService: CustomerService) { }
-
   customers!: Customer[];
+  constructor(private customerService: CustomerService) { }
 
   ngOnInit(): void {
     this.getCustomers();
   }
   
   getCustomers(): any {
-    this.customerService.getCustomers().subscribe(customers => {
-      console.log(customers);
-      this.customers = customers;
-    }, 
-      (error: any) => console.log(error))
+    this.customerService.getCustomers().subscribe(customers => 
+      {
+        this.customers = customers;
+      }, 
+      (error: any) => console.log(error)
+      );
   }
 
 }
