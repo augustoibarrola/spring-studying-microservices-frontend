@@ -21,7 +21,6 @@ export class CustomerDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCustomerDetails();
-    console.log(this.customer);
   }
 
   getCustomerDetails(){
@@ -33,8 +32,9 @@ export class CustomerDetailsComponent implements OnInit {
   
   openModal():any {
     this.modalRef = this.modalService.open(ModalComponent, {data: {customer: this.customer}});
-    console.log("Customer:\n");
-    console.log(this.customer);
+    this.modalRef.onClose.subscribe((updatedCustomer: Customer) => {
+      this.customer = <Customer>updatedCustomer;
+    });
 
   }
 

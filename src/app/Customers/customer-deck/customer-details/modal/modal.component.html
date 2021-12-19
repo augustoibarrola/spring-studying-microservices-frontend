@@ -1,44 +1,34 @@
-<form [formGroup]="customerDetails" (ngSubmit)=onSubmit()>
+<form [formGroup]="customerDetails" (ngSubmit)=onSubmit(customerDetails)>
     <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Edit Customer Details</h5>
     </div>
     <div class="modal-body">
 
-        <div class="form-group">
-            <label class=" " for=""> Name: </label>
-            <div class="">
-                <input class="form-control" type="text" name="" id="" formControlName="controlFirstName"
-                    placeholder= {{customer.firstName}} />
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label class=" " for=""> Name </label>
-            <div class="">
-                <input class="form-control" type="text" name="" id="" formControlName="controlMiddleName"
-                    placeholder= {{customer.middleName}} />
-            </div>
-        </div>
-
-        <div class="form-group">
-            <label class=" " for=""> Name </label>
-            <div class="">
-                <input class="form-control" type="text" name="" id="" formControlName="controlLastName"
-                    placeholder={{customer.lastName}} />
-            </div>
-        </div>
+        <div class="form-group" >
+            <h2>Name</h2>
+        
+            <label for="firstName">First: </label>
+            <input type="text" name="" id="firstName" placeholder={{customer.firstName}} formControlName="firstName">
+        
+            <label for="middleName">Middle: </label>
+            <input type="text" name="" id="middleName" placeholder={{customer.middleName}} formControlName="middleName">
+        
+            <label for="lastName">Last: </label>
+            <input type="text" name="" id="lastName" placeholder={{customer.lastName}} formControlName="lastName">
+        
+          </div>
 
         <div class="form-group">
             <label class=" " for=""> Age: </label>
             <div class="">
-                <input class="form-control" type="text" name="" id="" formControlName="controlAge" placeholder={{customer.age}} />
+                <input class="form-control" type="text" name="" id="" formControlName="age" placeholder={{customer.age}} />
             </div>
         </div>
 
         <div class="form-group">
             <label class=" " for=""> Phone Number: </label>
             <div class="">
-                <input class="form-control" type="text" name="" id="" formControlName="controlPhoneNumber"
+                <input class="form-control" type="text" name="" id="" formControlName="phoneNumber"
                     placeholder={{customer.phoneNumber}} />
             </div>
         </div>
@@ -46,7 +36,7 @@
         <div class="form-group">
             <label class=" " for=""> E-Mail: </label>
             <div class="">
-                <input class="form-control" type="text" name="" id="" formControlName="controlEMail"
+                <input class="form-control" type="text" name="" id="" formControlName="email"
                     placeholder={{customer.email}} />
             </div>
         </div>
@@ -54,7 +44,7 @@
         <div class="form-group">
             <label class=" " for=""> Address: </label>
             <div class="">
-                <input class="form-control" type="text" name="" id="" formControlName="controlAddress"
+                <input class="form-control" type="text" name="" id="" formControlName="address"
                     placeholder={{customer.address}} />
             </div>
         </div>
@@ -62,7 +52,7 @@
         <div class="form-group">
             <label class=" " for=""> SSN: </label>
             <div class="">
-                <input class="form-control" type="text" name="" id="" formControlName="controlSSN" placeholder={{customer.ssn}} />
+                <input class="form-control" type="text" name="" id="" formControlName="ssn" placeholder={{customer.ssn}} />
             </div>
         </div>
 
