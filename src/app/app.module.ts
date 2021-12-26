@@ -10,13 +10,15 @@ import { ModalComponent } from './Customers/customer-deck/customer-details/modal
 import { MdbModalService } from 'mdb-angular-ui-kit/modal';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PostCustomerComponent } from './Customers/post-customer/post-customer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomerDeckComponent,
     CustomerDetailsComponent,
-    ModalComponent
+    ModalComponent,
+    PostCustomerComponent
   ],
   imports: [
     BrowserModule,
