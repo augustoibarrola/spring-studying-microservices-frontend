@@ -15,11 +15,14 @@ export class CustomerDeckComponent implements OnInit {
   ngOnInit(): void {
     this.getCustomers();
   }
+
+
   
   getCustomers(): any {
     this.customerService.getCustomers().subscribe(customers => 
       {
         this.customers = customers;
+        console.log(this.customers);
       }, 
       (error: any) => console.log(error)
       );

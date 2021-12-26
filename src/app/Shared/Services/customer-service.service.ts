@@ -3,22 +3,31 @@ import { HttpClient } from '@angular/common/http';
 import { Customer } from '../Models/customer';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class CustomerService {
+
   customers!: Customer[];
   constructor(private http: HttpClient) { }
-  
+
   customersURL: string = "http://localhost:8200/customers";
   customerURL: string = "http://localhost:8200/customer/";
 
-  getCustomers() {
+  getCustomers() 
+  {
     return this.http.get<Customer[]>(this.customersURL);
   }
 
-  getCustomerDetails(id: number) {
+  getCustomerDetails(id: number) 
+  {
     return this.http.get<Customer>(this.customerURL + id.toString());
+  }
+  updateCustomerDetails(id: number, customer: Customer) 
+  {
+    console.log("CALLING BACKEND.... \n");
+    return this.http.put<Customer>(this.customerURL + id.toString(), customer);
   }
 
 }

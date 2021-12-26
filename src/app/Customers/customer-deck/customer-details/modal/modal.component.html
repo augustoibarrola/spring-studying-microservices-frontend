@@ -1,67 +1,68 @@
 <form [formGroup]="customerDetails" (ngSubmit)=onSubmit(customerDetails)>
+    
     <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Edit Customer Details</h5>
     </div>
-    <div class="modal-body">
 
-        <div class="form-group" >
-            <h2>Name</h2>
+    <div class="modal-body container-fluid">
         
-            <label for="firstName">First: </label>
-            <input type="text" name="" id="firstName" placeholder={{customer.firstName}} formControlName="firstName">
-        
-            <label for="middleName">Middle: </label>
-            <input type="text" name="" id="middleName" placeholder={{customer.middleName}} formControlName="middleName">
-        
-            <label for="lastName">Last: </label>
-            <input type="text" name="" id="lastName" placeholder={{customer.lastName}} formControlName="lastName">
-        
-          </div>
+        <div class="form-group">
+
+            <div class="input-group mb-2" >
+                    <span class="input-group-text float-start col-lg-2 border-0">First Name</span>
+                    <input type="text" class="form-control col-8" placeholder={{customer.firstName}} aria-label="First Name" formControlName="firstName">
+            </div>
+            <div class="input-group mb-2" >
+
+                    <span class="input-group-text float-start col-lg-2 border-0">Middle Name</span>
+                    <input type="text" class="form-control col-8" placeholder={{customer.middleName}} aria-label="Middle Name" formControlName="middleName">
+            </div>
+            <div class="input-group mb-2" >
+                    <span class="input-group-text float-start col-lg-2 border-0">Last Name</span>
+                    <input type="text" class="form-control col-8" placeholder={{customer.lastName}} aria-label="Last Name" formControlName="lastName">
+            </div>
+
+        </div>
 
         <div class="form-group">
-            <label class=" " for=""> Age: </label>
-            <div class="">
-                <input class="form-control" type="text" name="" id="" formControlName="age" placeholder={{customer.age}} />
+            <div class="input-group mb-2">
+                <span class="input-group-text float-start col-lg-2 border-0" for="">Age</span>
+                <input type="text" class="form-control" placeholder={{customer.age}} aria-label="Age" formControlName="age" />
             </div>
         </div>
 
         <div class="form-group">
-            <label class=" " for=""> Phone Number: </label>
-            <div class="">
-                <input class="form-control" type="text" name="" id="" formControlName="phoneNumber"
-                    placeholder={{customer.phoneNumber}} />
+            <div class="input-group mb-2">
+                <span class="input-group-text float-start col-lg-2 border-0" for=""> Phone Number</span>
+                <input  type="text" class="form-control" placeholder={{customer.phoneNumber}} aria-label="Phone Number" formControlName="phoneNumber" />
             </div>
         </div>
 
         <div class="form-group">
-            <label class=" " for=""> E-Mail: </label>
-            <div class="">
-                <input class="form-control" type="text" name="" id="" formControlName="email"
-                    placeholder={{customer.email}} />
+            <div class="input-group mb-2">
+                <span class="input-group-text float-start col-lg-2 border-0" for=""> E-Mail</span>
+                <input  type="text" class="form-control" placeholder={{customer.email}} aria-label="E-Mail" formControlName="email" />
             </div>
         </div>
 
         <div class="form-group">
-            <label class=" " for=""> Address: </label>
-            <div class="">
-                <input class="form-control" type="text" name="" id="" formControlName="address"
-                    placeholder={{customer.address}} />
+            <div class="input-group mb-2">
+                <span class="input-group-text float-start col-lg-2 border-0" for=""> Address</span>
+                <input  type="text" class="form-control" placeholder={{customer.address}} aria-label="Address" formControlName="address" />
             </div>
         </div>
         <!-- TODO hide ssn so that it only shows last 4 ; format it -->
         <div class="form-group">
-            <label class=" " for=""> SSN: </label>
-            <div class="">
-                <input class="form-control" type="text" name="" id="" formControlName="ssn" placeholder={{customer.ssn}} />
+            <div class="input-group mb-2">
+                <span class="input-group-text float-start col-lg-2 border-0" for=""> SSN</span>
+                <input  type="text" class="form-control" placeholder={{customer.ssn}} aria-label="SSN" formControlName="ssn" />
             </div>
         </div>
-
-
-
-
     </div>
+
     <div class="modal-footer">
         <button type="submit" class="btn btn-primary">Save changes</button>
-        <button type="button" class="btn btn-secondary" (click)="modalRef.close()">Close</button>
+        <button type="button" class="btn btn-secondary" (click)="modalRef.close(customer)">Close</button>
     </div>
+
 </form>

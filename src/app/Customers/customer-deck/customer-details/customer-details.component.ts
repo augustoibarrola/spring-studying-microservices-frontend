@@ -31,11 +31,16 @@ export class CustomerDetailsComponent implements OnInit {
   }
   
   openModal():any {
-    this.modalRef = this.modalService.open(ModalComponent, {data: {customer: this.customer}});
+    this.modalRef = this.modalService.open(ModalComponent, {
+      data: {
+        customer: this.customer
+      }, 
+      modalClass: 'modal-xl'
+    });
     this.modalRef.onClose.subscribe((updatedCustomer: Customer) => {
       this.customer = <Customer>updatedCustomer;
+      console.log("customer on modal close: \n", this.customer);
     });
-
   }
 
 }

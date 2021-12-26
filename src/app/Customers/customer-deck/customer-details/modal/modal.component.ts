@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { MdbModalRef } from 'mdb-angular-ui-kit/modal';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Customer } from 'src/app/Shared/Models/customer';
+import { CustomerService } from 'src/app/Shared/Services/customer-service.service';
 
 
 @Component({
@@ -25,7 +26,7 @@ export class ModalComponent implements OnInit {
     ssn: [''],
   });
 
-  constructor(public modalRef: MdbModalRef<ModalComponent>, private fb: FormBuilder) { }
+  constructor(private customerService: CustomerService, public modalRef: MdbModalRef<ModalComponent>, private fb: FormBuilder) { }
 
   ngOnInit(): void { }
 
@@ -40,8 +41,17 @@ export class ModalComponent implements OnInit {
     this.customer.address = this.customerDetails.value.address === "" ? this.customer.address : this.customerDetails.value.address;
     this.customer.ssn = this.customerDetails.value.ssn === "" ? this.customer.ssn : this.customerDetails.value.ssn;
 
-    this.modalRef.close(this.customer);
+    this.updateCustomerDetails();
 
+  }
+
+  updateCustomerDetails()
+  {
+    this.customerService.updateCustomerDetails(this.customer.id, this.customer).subscribe((updatedCustomer:Customer) => {
+      this.customer = updatedCustomer;
+      console.log("Customer was updated in backend. Updated Customer: \n\n", this.customer);
+    });
+    this.modalRef.close(this.customer);
   }
 
 }
