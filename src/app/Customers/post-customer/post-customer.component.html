@@ -1,1 +1,69 @@
-<p>post-customer works!</p>
+<div class="mb-4">
+    <h5 class="" id="exampleModalLabel">Create New Customer Account</h5>
+</div>
+
+<div class=" container-fluid me-5">
+    <form [formGroup]="newCustomerDetails" (ngSubmit)=onSubmit(newCustomerDetails)>
+
+        <div class="form-group">
+
+            <div class="input-group mb-2 ps-2 pe-5">
+                <span class="input-group-text float-start col-lg-2 border-0">First Name</span>
+                <input type="text" class="form-control col-8" placeholder="" aria-label="First Name"
+                    formControlName="firstName">
+            </div>
+            <div class="input-group mb-2 ps-2 pe-5">
+
+                <span class="input-group-text float-start col-lg-2 border-0">Middle Name</span>
+                <input type="text" class="form-control col-8" placeholder="" aria-label="Middle Name"
+                    formControlName="middleName">
+            </div>
+            <div class="input-group mb-2 ps-2 pe-5">
+                <span class="input-group-text float-start col-lg-2 border-0">Last Name</span>
+                <input type="text" class="form-control col-8" placeholder="" aria-label="Last Name"
+                    formControlName="lastName">
+            </div>
+
+        </div>
+
+        <div class="form-group">
+            <div class="input-group mb-2 ps-2 pe-5">
+                <span class="input-group-text float-start col-lg-2 border-0" for="">Age</span>
+                <input type="text" class="form-control" placeholder="" aria-label="Age" formControlName="age" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-group mb-2 ps-2 pe-5">
+                <span class="input-group-text float-start col-lg-2 border-0" for=""> Phone Number</span>
+                <input type="text" class="form-control" placeholder="" aria-label="Phone Number"
+                    formControlName="phoneNumber" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-group mb-2 ps-2 pe-5">
+                <span class="input-group-text float-start col-lg-2 border-0" for=""> E-Mail</span>
+                <input type="text" class="form-control" placeholder="" aria-label="E-Mail" formControlName="email" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="input-group mb-2 ps-2 pe-5">
+                <span class="input-group-text float-start col-lg-2 border-0" for=""> Address</span>
+                <input type="text" class="form-control" placeholder="" aria-label="Address" formControlName="address" />
+            </div>
+        </div>
+        <!-- TODO hide ssn so that it only shows last 4 ; format it -->
+        <div class="form-group">
+            <div class="input-group mb-2 ps-2 pe-5">
+                <span class="input-group-text float-start col-lg-2 border-0" for=""> SSN</span>
+                <input type="text" class="form-control" placeholder="" aria-label="SSN" formControlName="ssn" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary float-end mt-4 me-5">Create Customer</button>
+        </div>
+    </form>
+</div>

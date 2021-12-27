@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CustomerService } from 'src/app/Shared/Services/customer-service.service';
+import { Customer } from 'src/app/Shared/Models/customer';
+import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-post-customer',
@@ -7,9 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostCustomerComponent implements OnInit {
 
-  constructor() { }
+  newCustomer!:Customer;
+  newCustomerDetails = this.fb.group({
+    firstName: ['', Validators.required],
+    middleName: [''],
+    lastName: [''],
 
-  ngOnInit(): void {
+    age: [''],
+    phoneNumber: [''],
+    email: [''],
+    address: [''],
+    ssn: [''],
+  });
+  constructor(private customerService:CustomerService, private fb:FormBuilder) { }
+
+  ngOnInit(): void { }
+
+  onSubmit(newCustomerDetails:FormGroup){
+    
+    console.log(newCustomerDetails.value);
   }
 
 }
