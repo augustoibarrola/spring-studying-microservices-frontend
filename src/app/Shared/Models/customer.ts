@@ -5,7 +5,7 @@ export class Customer {
     middleName!:string;
     age!: number;
     phoneNumber!: number;
-    email!:string;
+    eMail!:string;
     address!: string;
     // currentPlan!: number;
     // currentPhone!: number;

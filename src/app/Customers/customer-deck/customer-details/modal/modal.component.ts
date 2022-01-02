@@ -37,7 +37,7 @@ export class ModalComponent implements OnInit {
     this.customer.lastName = this.customerDetails.value.lastName === "" ? this.customer.lastName : this.customerDetails.value.lastName;
     this.customer.age = this.customerDetails.value.age === "" ? this.customer.age : this.customerDetails.value.age;
     this.customer.phoneNumber = this.customerDetails.value.phoneNumber === "" ? this.customer.phoneNumber : this.customerDetails.value.phoneNumber;
-    this.customer.email = this.customerDetails.value.email === "" ? this.customer.email : this.customerDetails.value.email;
+    this.customer.eMail = this.customerDetails.value.eMail === "" ? this.customer.eMail : this.customerDetails.value.eMail;
     this.customer.address = this.customerDetails.value.address === "" ? this.customer.address : this.customerDetails.value.address;
     this.customer.ssn = this.customerDetails.value.ssn === "" ? this.customer.ssn : this.customerDetails.value.ssn;
 
