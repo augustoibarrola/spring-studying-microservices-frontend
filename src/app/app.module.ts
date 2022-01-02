@@ -12,6 +12,8 @@ import { MdbRippleModule } from 'mdb-angular-ui-kit/ripple';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PostCustomerComponent } from './Customers/post-customer/post-customer.component';
+import { PhoneNumberPipe } from './Shared/Pipes/phone-number.pipe';
+import { FullnamePipePipe } from './Shared/Pipes/fullname-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { PostCustomerComponent } from './Customers/post-customer/post-customer.c
     CustomerDeckComponent,
     CustomerDetailsComponent,
     ModalComponent,
-    PostCustomerComponent
+    PostCustomerComponent,
+    PhoneNumberPipe,
+    FullnamePipePipe
   ],
   imports: [
     BrowserModule,
