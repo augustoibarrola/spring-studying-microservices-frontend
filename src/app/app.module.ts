@@ -8,6 +8,7 @@ import { CustomerDeckComponent } from './Customers/customer-deck/customer-deck.c
 import { CustomerDetailsComponent } from './Customers/customer-deck/customer-details/customer-details.component';
 import { ModalComponent } from './Customers/customer-deck/customer-details/modal/modal.component';
 import { MdbModalService } from 'mdb-angular-ui-kit/modal';
+import { MdbRippleModule } from 'mdb-angular-ui-kit/ripple';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PostCustomerComponent } from './Customers/post-customer/post-customer.component';
@@ -26,6 +27,7 @@ import { PostCustomerComponent } from './Customers/post-customer/post-customer.c
     BrowserAnimationsModule, 
     HttpClientModule, 
     OverlayModule,
+    MdbRippleModule,
     ReactiveFormsModule
   ],
   providers: [MdbModalService],

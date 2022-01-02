@@ -21,14 +21,16 @@ export class PostCustomerComponent implements OnInit {
     email: [''],
     address: [''],
     ssn: [''],
+    password: ['']
   });
   constructor(private customerService:CustomerService, private fb:FormBuilder) { }
 
   ngOnInit(): void { }
 
   onSubmit(newCustomerDetails:FormGroup){
-    
-    console.log(newCustomerDetails.value);
+    this.newCustomer = <Customer>newCustomerDetails.value;
+    console.log(this.newCustomer);
+    this.customerService.postNewCustomer(this.newCustomer).subscribe((success => console.log("SUCCESS \n\n", success)), error => console.log("ERROR \n\n", error));
   }
 
 }

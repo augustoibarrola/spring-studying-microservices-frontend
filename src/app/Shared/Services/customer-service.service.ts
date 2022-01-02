@@ -24,6 +24,12 @@ export class CustomerService {
   {
     return this.http.get<Customer>(this.customerURL + id.toString());
   }
+
+  postNewCustomer(newCustomer:Customer)
+  {
+    return this.http.post<Customer>(this.customersURL, newCustomer);
+  }
+
   updateCustomerDetails(id: number, customer: Customer) 
   {
     console.log("CALLING BACKEND.... \n");
