@@ -1,14 +1,13 @@
 <div *ngIf="customer; else noCustomer" class="container">
-    
-    <div class="row">
-        <!-- Customer Personal Details -->
-        <div class="card mb-3 w-100">
 
-            <div class="col-md-8 mt-4 ">
+    <div class="row mb-4">
 
-                <h5 class="card-title text-muted">Customer Details</h5>
-
+        <div class="col-sm-8">
+            <!-- Customer Personal Details -->
+            <div class="card">
                 <div class="card-body">
+                    <h5 class="card-title text-muted">Customer Details</h5>
+
                     <div class="row">
                         <div class="col-sm-3">
                             <p class="mb-0">Id</p>
@@ -18,6 +17,7 @@
                         </div>
                     </div>
                     <hr>
+
                     <div class="row">
                         <div class="col-sm-3">
                             <p class="mb-0">Full Name</p>
@@ -28,6 +28,7 @@
                         </div>
                     </div>
                     <hr>
+
                     <div class="row">
                         <div class="col-sm-3">
                             <p class="mb-0">Age</p>
@@ -37,6 +38,7 @@
                         </div>
                     </div>
                     <hr>
+
                     <div class="row">
                         <div class="col-sm-3">
                             <p class="mb-0">Email</p>
@@ -46,6 +48,7 @@
                         </div>
                     </div>
                     <hr>
+
                     <div class="row">
                         <div class="col-sm-3">
                             <p class="mb-0">Address</p>
@@ -55,6 +58,7 @@
                         </div>
                     </div>
                     <hr>
+
                     <div class="row">
                         <div class="col-sm-3">
                             <p class="mb-0">Password</p>
@@ -64,6 +68,7 @@
                         </div>
                     </div>
                     <hr>
+
                     <div class="row">
                         <div class="col-sm-3">
                             <p class="mb-0">SSN</p>
@@ -75,16 +80,22 @@
                 </div>
 
                 <!-- EDIT BUTTON -->
-                <div class="card-footer text-muted">
-                    <button mdbRipple type="button" class="btn btn-primary btn-floating" (click)="openModal()">
-                        <i class="fas fa-user-edit"></i>
-                    </button>
-                </div>
+                <!-- <div class="row">
+                    <div class="col-sm-3"> -->
+                        <!-- <p class="mb-0">SSN</p> -->
+                        <!-- <button mdbRipple type="button" class="btn btn-primary btn-floating mb-0" (click)="openModal()"> -->
+                            <!-- <i class="fas fa-user-edit"></i>
+                        </button>
+                    </div>
+                </div> -->
+                <!-- <div class="card-footer text-muted"> -->
+                <!-- </div> -->
 
             </div>
         </div>
     </div>
-    <div class="row">
+
+    <div class="row mt-4">
 
         <!-- Customer Phone Details -->
         <div class="col-sm-6">
@@ -94,10 +105,10 @@
                     <h5 class="card-title text-muted">Phone</h5>
 
                     <div class="row">
-                        <div class="col-sm-3">
-                            <p class="mb-0">Phone</p>
+                        <div class="col-sm-4">
+                            <p class="mb-0">Phone Number:</p>
                         </div>
-                        <div class="col-sm-9">
+                        <div class="col-sm-8">
                             <p class="text-muted mb-0">{{customer.phoneNumber | phoneNumberPipe}}</p>
                         </div>
                     </div>
@@ -109,7 +120,7 @@
         <!-- Customer Plan Details -->
         <div class="col-md-6">
             <div class="card">
-                <div class="card-body">  
+                <div class="card-body">
                     <h5 class="card-title text-muted">Phone Plan</h5>
                     <div class="row">
                         <div class="col-sm-3">
