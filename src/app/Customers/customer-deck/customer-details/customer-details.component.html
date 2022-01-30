@@ -1,112 +1,132 @@
-<div *ngIf="customer; else noCustomer" class="container-fluid">
-    <div class="card mb-3 w-100">
-        <div class="row g-0">
-
-            <div class="col-md-4">
-                <img src="https://mdbootstrap.com/wp-content/uploads/2020/06/vertical.jpg" alt="Trendy Pants and Shoes"
-                    class="img-fluid" />
-            </div>
+<div *ngIf="customer; else noCustomer" class="container">
+    
+    <div class="row">
+        <!-- Customer Personal Details -->
+        <div class="card mb-3 w-100">
 
             <div class="col-md-8 mt-4 ">
 
-                <h5 class="text-muted">
-                    Customer Details
-                </h5 >    
-      
+                <h5 class="card-title text-muted">Customer Details</h5>
 
-                <!-- <div class="card-body">
-                    <div>
-                        <h5 class="card-title"> Name: </h5>
-                    </div>
-                    <div class="card-text">
-                        <p>{{customer.firstName}}</p>
-                        <p>{{customer.middleName}}</p>
-                        <p>{{customer.lastName}}</p>
-                    </div> -->
-
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <p class="mb-0">Id</p>
-                            </div>
-                            <div class="col-sm-9">
-                                <p class="text-muted mb-0">{{customer.id}}</p>
-                            </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <p class="mb-0">Id</p>
                         </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <p class="mb-0">Full Name</p>
-                            </div>
-                            <div class="col-sm-9">
-                                <!-- <p class="text-muted mb-0">{{customer.firstName}}</p> -->
-                                <p class="text-muted mb-0">{{customer | fullnamePipe}}</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <p class="mb-0">Age</p>
-                            </div>
-                            <div class="col-sm-9">
-                                <p class="text-muted mb-0">{{customer.age}}</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <p class="mb-0">Email</p>
-                            </div>
-                            <div class="col-sm-9">
-                                <p class="text-muted mb-0">{{customer.eMail}}</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <p class="mb-0">Phone</p>
-                            </div>
-                            <div class="col-sm-9">
-                                <p class="text-muted mb-0">{{customer.phoneNumber | phoneNumberPipe}}</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <p class="mb-0">Address</p>
-                            </div>
-                            <div class="col-sm-9">
-                                <p class="text-muted mb-0">{{customer.address}}</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <p class="mb-0">Password</p>
-                            </div>
-                            <div class="col-sm-9">
-                                <p class="text-muted mb-0">{{customer.password}}</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <p class="mb-0">SSN</p>
-                            </div>
-                            <div class="col-sm-9">
-                                <p class="text-muted mb-0">{{customer.ssn}}</p>
-                            </div>
+                        <div class="col-sm-9">
+                            <p class="text-muted mb-0">{{customer.id}}</p>
                         </div>
                     </div>
-
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <p class="mb-0">Full Name</p>
+                        </div>
+                        <div class="col-sm-9">
+                            <!-- <p class="text-muted mb-0">{{customer.firstName}}</p> -->
+                            <p class="text-muted mb-0">{{customer | fullnamePipe}}</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <p class="mb-0">Age</p>
+                        </div>
+                        <div class="col-sm-9">
+                            <p class="text-muted mb-0">{{customer.age}}</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <p class="mb-0">Email</p>
+                        </div>
+                        <div class="col-sm-9">
+                            <p class="text-muted mb-0">{{customer.eMail}}</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <p class="mb-0">Address</p>
+                        </div>
+                        <div class="col-sm-9">
+                            <p class="text-muted mb-0">{{customer.address}}</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <p class="mb-0">Password</p>
+                        </div>
+                        <div class="col-sm-9">
+                            <p class="text-muted mb-0">{{customer.password}}</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <p class="mb-0">SSN</p>
+                        </div>
+                        <div class="col-sm-9">
+                            <p class="text-muted mb-0">{{customer.ssn}}</p>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- EDIT BUTTON -->
                 <div class="card-footer text-muted">
                     <button mdbRipple type="button" class="btn btn-primary btn-floating" (click)="openModal()">
                         <i class="fas fa-user-edit"></i>
                     </button>
                 </div>
+
             </div>
         </div>
     </div>
+    <div class="row">
+
+        <!-- Customer Phone Details -->
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+
+                    <h5 class="card-title text-muted">Phone</h5>
+
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <p class="mb-0">Phone</p>
+                        </div>
+                        <div class="col-sm-9">
+                            <p class="text-muted mb-0">{{customer.phoneNumber | phoneNumberPipe}}</p>
+                        </div>
+                    </div>
+                    <hr>
+
+                </div>
+            </div>
+        </div>
+        <!-- Customer Plan Details -->
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">  
+                    <h5 class="card-title text-muted">Phone Plan</h5>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <p class="mb-0">Phone Plan</p>
+                        </div>
+                        <div class="col-sm-9">
+                            <!-- <p class="text-muted mb-0">{{customer.phoneNumber | phoneNumberPipe}}</p> -->
+                            <p class="text-muted mb-0">PLAN GOES HERE</p>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
 
 <ng-template #noCustomer>Sorry! no customer details.</ng-template>
